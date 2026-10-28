@@ -10,7 +10,8 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 const email = document.querySelector('#email'); email.textContent = practice.email; email.href = `mailto:${practice.email}`;
 document.querySelector('#directions').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(practice.address)}`;
 if (practice.confirmedForLaunch) document.querySelector('#review-status').remove();
-const photoUrl = approvedUrl(practice.photo.src);
+// Allow the bundled local portrait or an approved HTTPS photograph.
+const photoUrl = practice.photo.src === 'doctor-photo.jpg' ? './doctor-photo.jpg' : approvedUrl(practice.photo.src);
 if (photoUrl) { const img = new Image(); img.src = photoUrl; img.alt = practice.photo.alt; img.onload = () => document.querySelector('.portrait').replaceChildren(img); }
 const toggle = document.querySelector('.menu-toggle'), navigation = document.querySelector('#navigation');
 toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); navigation.classList.toggle('open', open); });

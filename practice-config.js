@@ -8,7 +8,7 @@ export const practice = {
   fax: '(516) 621-7158', email: 'vijaybgopalmd@gmail.com',
   // Only approved HTTPS patient-facing URLs. Leave blank until verified.
   portal: { home: '', appointment: '', payment: '', balance: '', refill: '', message: '' },
-  photo: { src: '', alt: 'Vijay B. Gopal, M.D., F.A.C.P.' }
+  photo: { src: 'doctor-photo.jpg', alt: 'Vijay B. Gopal, M.D., F.A.C.P.' }
 };
 export function approvedUrl(value) {
   if (!value) return null;
