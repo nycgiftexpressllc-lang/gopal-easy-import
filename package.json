@@ -1,0 +1,13 @@
+{
+  "name": "gopal-internal-medicine",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test config.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
